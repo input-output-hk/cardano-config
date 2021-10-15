@@ -11,6 +11,7 @@ import           System.Process (readProcessWithExitCode)
 
 -- | Git revision found by running git rev-parse. If git could not be
 -- executed, then this will be an empty string.
+{-# NOINLINE gitRevFromGit #-}
 gitRevFromGit :: TH.Q TH.Exp
 gitRevFromGit = TH.LitE . TH.StringL <$> TH.runIO runGitRevParse
     where

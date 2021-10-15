@@ -13,6 +13,7 @@ import qualified Data.Text as T
 
 import           Cardano.Config.Git.RevFromGit (gitRevFromGit)
 
+{-# NOINLINE gitRev #-}
 gitRev :: Text
 gitRev | gitRevEmbed /= zeroRev = gitRevEmbed
        | T.null fromGit         = zeroRev
