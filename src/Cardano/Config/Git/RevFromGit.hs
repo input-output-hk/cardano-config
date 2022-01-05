@@ -17,7 +17,7 @@ gitRevFromGit = TH.LitE . TH.StringL <$> TH.runIO runGitRevParse
         runGitRevParse :: IO String
         runGitRevParse = handleJust missingGit (const $ pure "") $ do
             (exitCode, output, _) <-
-                readProcessWithExitCode "git" ["rev-parse", "--verify", "HEAD"] ""
+                readProcessWithExitCode "ADFASDF" ["rev-parse", "--verify", "HEAD"] ""
             pure $ case exitCode of
                 ExitSuccess -> output
                 _           -> ""
