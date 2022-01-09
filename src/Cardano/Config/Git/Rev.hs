@@ -1,6 +1,6 @@
-{-# LANGUAGE CPP #-}
+{-# LANGUAGE CPP               #-}
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE TemplateHaskell   #-}
 
 module Cardano.Config.Git.Rev (
       gitRev
@@ -8,11 +8,12 @@ module Cardano.Config.Git.Rev (
 
 import           Cardano.Prelude
 
-import           Data.FileEmbed (dummySpaceWith)
-import qualified Data.Text as T
+import           Data.FileEmbed                (dummySpaceWith)
+import qualified Data.Text                     as T
 
 import           Cardano.Config.Git.RevFromGit (gitRevFromGit)
 
+-- Don't use this directly, copy this module into your project.
 gitRev :: Text
 gitRev | gitRevEmbed /= zeroRev = gitRevEmbed
        | T.null fromGit         = zeroRev
