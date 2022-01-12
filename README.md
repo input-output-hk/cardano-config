@@ -1,5 +1,8 @@
 # Cardano Configuration
 
+*DEPRECATED* please don't use this package directly. 
+See `cardano-node` or `cardano-db-sync` as the only places that used this functionality.
+
 [![GitHub CI][github-shield]][github-ci]
 
 This package exposes functions to provide git information for Cardano tooling.
